@@ -2,9 +2,9 @@
 
 An end-to-end Machine Learning Operations (MLOps) project for predicting customer churn and demonstrating how an ML model can be validated, trained, tracked, quality-gated, versioned, monitored, and selectively deployed.
 
-**GitHub repository:** [jnaneswar077/churn-prediction-mlops](https://github.com/jnaneswar077/churn-prediction-mlops)  
+**GitHub repository:** [kothabhavyasree/churn-prediction](https://github.com/kothabhavyasree/churn-prediction)  
 **Primary branch:** `main`  
-**Project status:** Labs 1–13 integrated. The core monitoring-to-retraining workflow has been executed successfully through GitHub Actions on a self-hosted Windows runner. Scheduled execution is configured; the runner currently uses interactive mode, so the machine and runner process must remain available.
+**Project status:** Labs 1–13 integrated. The core monitoring-to-retraining workflow has been executed successfully through GitHub Actions on a self-hosted macOS/ARM64 runner. Scheduled execution is configured; the runner currently uses interactive mode, so the machine and runner process must remain available.
 
 ---
 
@@ -50,7 +50,7 @@ A central design principle is that **a successfully trained model is not automat
 - Track incoming dataset batches by file hash and lineage, and prevent duplicate ingestion.
 - Use drift reports to decide whether the existing ML pipeline should be triggered.
 - Package the serving application with Docker and manage the API deployment with Kubernetes.
-- Use GitHub Actions and a self-hosted Windows runner to automate monitoring and pipeline execution.
+- Use GitHub Actions and a self-hosted macOS/ARM64 runner to automate monitoring and pipeline execution.
 
 ## Key Capabilities
 
@@ -68,7 +68,7 @@ A central design principle is that **a successfully trained model is not automat
 | Promotion-gated deployment | Skip deployment unless the lifecycle report confirms promotion |
 | Model serving | FastAPI application packaged in a Docker image |
 | Orchestration | Kubernetes deployment and service manifests |
-| Workflow automation | GitHub Actions with a self-hosted Windows runner |
+| Workflow automation | GitHub Actions with a self-hosted macOS/ARM64 runner |
 | Failure handling | Fail-fast pipeline stages and failure-injection/recovery exercises |
 
 ## Architecture
@@ -79,7 +79,7 @@ The architecture has two connected flows: the **model lifecycle pipeline** and t
 
 ```mermaid
 flowchart TD
-    A[GitHub Actions trigger] --> B[Self-hosted Windows runner]
+    A[GitHub Actions trigger] --> B[Self-hosted macOS/ARM64 runner]
     B --> C[12_monitor_trigger.py]
     C --> D[12_drift_analysis.py]
     D --> E{Drift detected?}
@@ -205,7 +205,7 @@ The lifecycle manager uses recall as the decision metric. Passing the quality ga
 | Containerization | Docker, Docker Desktop |
 | Orchestration | Kubernetes, `kubectl` |
 | Automation and version control | Git, GitHub, GitHub Actions |
-| Local automation host | Windows with a self-hosted GitHub Actions runner |
+| Local automation host | macOS (Apple Silicon) with a self-hosted GitHub Actions runner |
 
 ## Repository Layout
 
@@ -269,12 +269,12 @@ churn-prediction/
 
 ## Environment Setup
 
-The current automation is designed for the Windows development environment used by this project.
+The current automation is designed for the macOS development environment used by this project.
 
 ### Prerequisites
 
-- Windows and PowerShell
-- Python 3.11 (the serving container uses `python:3.11-slim`)
+- macOS and Terminal (zsh)
+- Python 3 (the serving container uses `python:3.11-slim`)
 - Git
 - Docker Desktop with Linux containers enabled
 - Kubernetes enabled in Docker Desktop, plus `kubectl`
@@ -284,16 +284,16 @@ The current automation is designed for the Windows development environment used 
 
 Run these commands from the repository root:
 
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
 For API-only dependencies, install:
 
-```powershell
+```bash
 python -m pip install -r requirements-api.txt
 ```
 
@@ -305,28 +305,28 @@ Run commands from the repository root while the intended virtual environment is 
 
 ### Run the main MLOps pipeline
 
-```powershell
-python .\src\mlops_pipeline\churn_prediction_pipeline.py
+```bash
+python src/mlops_pipeline/churn_prediction_pipeline.py
 ```
 
 Use this when you intend to process a new valid batch or run the configured pipeline. If the latest batch has already been ingested, the orchestrator intentionally stops after data loading.
 
 ### Run the monitoring and retraining trigger
 
-```powershell
-python .\src\mlops_pipeline\12_monitor_trigger.py
+```bash
+python src/mlops_pipeline/12_monitor_trigger.py
 ```
 
 This script runs the combined drift analysis, checks whether `data/raw/new_churn.csv` exists, and decides whether to invoke the main pipeline. It writes a monitoring decision report under `outputs/monitoring/`.
 
 ### Inspect the main reports
 
-```powershell
-python -m json.tool .\artifacts\data_load_report.json
-python -m json.tool .\reports\evaluation_report.json
-python -m json.tool .\reports\lifecycle_report.json
-python -m json.tool .\reports\deployment_automation_report.json
-Get-Content .\outputs\drift\drift_analysis_report.csv
+```bash
+python -m json.tool artifacts/data_load_report.json
+python -m json.tool reports/evaluation_report.json
+python -m json.tool reports/lifecycle_report.json
+python -m json.tool reports/deployment_automation_report.json
+cat outputs/drift/drift_analysis_report.csv
 ```
 
 The paths are generated during the relevant pipeline or monitoring execution; a report may not exist until that stage has run.
@@ -344,28 +344,28 @@ It supports:
 - `workflow_dispatch` for a manual run from GitHub Actions.
 - A schedule configured for minute 17 of each hour in `Asia/Kolkata`.
 
-The workflow targets the self-hosted runner labels `self-hosted`, `Windows`, and `X64`. It invokes the existing monitoring script instead of duplicating the MLOps logic in YAML.
+The workflow targets the self-hosted runner labels `self-hosted`, `macOS`, and `ARM64`. It invokes the existing monitoring script instead of duplicating the MLOps logic in YAML.
 
 ### Self-hosted runner operating mode
 
 The runner is currently configured in **interactive mode** and is started with:
 
-```powershell
-cd C:\actions-runner
-.\run.cmd
+```bash
+cd "$HOME/Downloads/churn-prediction-rerun/churn-prediction/actions-runner"
+./run.sh
 ```
 
-Keep this terminal open while waiting for jobs. Scheduled runs require the PC to be awake and connected to the network, and the runner process must be listening when the workflow is due. Docker Desktop/Kubernetes must also be running for deployment or Kubernetes-dependent steps.
+Keep this terminal open while waiting for jobs. Scheduled runs require the Mac to be awake and connected to the network, and the runner process must be listening when the workflow is due. Docker Desktop/Kubernetes must also be running for deployment or Kubernetes-dependent steps.
 
 ### Environment-specific path
 
 The current workflow uses this project path:
 
 ```text
-C:\Users\jnane\Favorites\churn-prediction
+/Users/bhavyasreekotha/Downloads/churn-prediction-rerun/churn-prediction
 ```
 
-If the project is moved to another directory or run by another Windows user, update the workflow path accordingly. The local project and its virtual environment are prerequisites for this self-hosted workflow; this workflow is not a portable GitHub-hosted Linux job.
+If the project is moved to another directory or run by another macOS user, update the workflow path accordingly. The local project and its virtual environment are prerequisites for this self-hosted workflow; this workflow is not a portable GitHub-hosted Linux job.
 
 ### Triggering a manual run
 
@@ -398,13 +398,13 @@ The deployment automation builds the image when the tag does not already exist, 
 
 Useful operational commands:
 
-```powershell
+```bash
 docker info
 kubectl get nodes
 kubectl get deployment churn-api
 kubectl get pods
 kubectl get service churn-api-service
-kubectl get deployment churn-api -o jsonpath="{.spec.template.spec.containers[0].image}"
+kubectl get deployment churn-api -o jsonpath='{.spec.template.spec.containers[0].image}{"\n"}' 
 ```
 
 The currently configured Docker Desktop cluster and image cache are local to the host. Running the deployment on another machine requires the appropriate Docker/Kubernetes context, artifacts, and image availability.
@@ -460,8 +460,8 @@ This run verifies the **new-batch ingestion → training/registration → evalua
 
 ## Operational Requirements and Limitations
 
-1. **Interactive runner:** The Windows runner is not currently installed as a service. It needs `C:\actions-runner\run.cmd` running to receive jobs.
-2. **Local Windows path:** The monitoring workflow is tied to the project path shown above.
+1. **Interactive runner:** The macOS runner is not currently installed as a service. It needs `$HOME/Downloads/churn-prediction-rerun/churn-prediction/actions-runner/run.sh` running to receive jobs.
+2. **Local macOS path:** The monitoring workflow is tied to the project path shown above.
 3. **Local dependencies:** The workflow depends on the local virtual environment, project data/artifacts, MLflow tracking store, Docker Desktop, and Kubernetes context.
 4. **Drift report inputs:** `12_drift_analysis.py` combines existing data-, prediction-, and concept-drift CSV reports. Ensure the upstream reports are refreshed by the relevant monitoring scripts before each monitoring cycle; the combined analysis script itself reads those reports rather than generating all underlying drift measurements.
 5. **Schedule verification:** The schedule is configured, but it should be considered operational only after scheduled runs are observed in GitHub Actions while the runner is online.
@@ -479,9 +479,9 @@ The file hash matches an entry in `data/raw/archive/dataset_lineage.json`. This 
 
 Start the runner interactively:
 
-```powershell
-cd C:\actions-runner
-.\run.cmd
+```bash
+cd "$HOME/Downloads/churn-prediction-rerun/churn-prediction/actions-runner"
+./run.sh
 ```
 
 Check GitHub **Settings → Actions → Runners** and confirm the runner is online/idle.
@@ -490,7 +490,7 @@ Check GitHub **Settings → Actions → Runners** and confirm the runner is onli
 
 Start Docker Desktop and wait until its Kubernetes cluster is healthy, then run:
 
-```powershell
+```bash
 docker info
 kubectl get nodes
 kubectl get deployment churn-api
@@ -506,7 +506,7 @@ Inspect `reports/lifecycle_report.json`. If `promoted` is `false`, `deploy_if_pr
 
 ### The scheduled workflow does not run
 
-Confirm the workflow file is on `main`, the schedule is present in `.github/workflows/lab13_monitoring.yml`, and the self-hosted runner is online at the scheduled time. The PC must not be asleep and the interactive runner window must remain open.
+Confirm the workflow file is on `main`, the schedule is present in `.github/workflows/lab13_monitoring.yml`, and the self-hosted runner is online at the scheduled time. The Mac must not be asleep and the interactive runner window must remain open.
 
 ## Documentation
 
@@ -533,4 +533,4 @@ Additional documents are maintained in `docs/`:
 
 ## Final Summary
 
-This project demonstrates an MLOps lifecycle from data ingestion and validation to training, tracking, quality gates, model lifecycle decisions, inference, monitoring, and conditional deployment. The recorded integration test shows the system can process a new batch and safely reject a candidate that does not outperform the current Production model. GitHub Actions automation is integrated with a self-hosted Windows runner; unattended scheduling remains dependent on keeping that runner and its local services available.
+This project demonstrates an MLOps lifecycle from data ingestion and validation to training, tracking, quality gates, model lifecycle decisions, inference, monitoring, and conditional deployment. The recorded integration test shows the system can process a new batch and safely reject a candidate that does not outperform the current Production model. GitHub Actions automation is integrated with a self-hosted macOS/ARM64 runner; unattended scheduling remains dependent on keeping that runner and its local services available.
