@@ -4,7 +4,7 @@ An end-to-end Machine Learning Operations (MLOps) project for predicting custome
 
 **GitHub repository:** [kothabhavyasree/churn-prediction](https://github.com/kothabhavyasree/churn-prediction)  
 **Primary branch:** `main`  
-**Project status:** Labs 1–13 integrated. The core monitoring-to-retraining workflow has been executed successfully through GitHub Actions on a self-hosted macOS/ARM64 runner. Scheduled execution is configured; the runner currently uses interactive mode, so the machine and runner process must remain available.
+**Project status:** Labs 1–13 have been run on macOS. Lab 1 confirmed the 7,444-row dataset loads and detected that the incoming 100-row batch had already been ingested; Lab 2 schema validation passed. The core monitoring-to-retraining workflow was also run through GitHub Actions on a self-hosted macOS/ARM64 runner. The runner uses interactive mode, so the Mac and runner process must remain available for jobs.
 
 ---
 
@@ -144,7 +144,7 @@ The primary dataset is stored at:
 data/raw/churn.csv
 ```
 
-The current dataset snapshot recorded during the verified integration run had **7,344 rows and 21 columns**. The fixed held-out test set contained 1,409 records, leaving 5,935 training records for that run. Dataset size can change as additional valid batches are ingested.
+An earlier integration-run snapshot had **7,344 rows and 21 columns**. The fixed held-out test set contained 1,409 records, leaving 5,935 training records for that run. The current local dataset has 7,444 rows; dataset size can change as additional valid batches are ingested.
 
 Important fields include `customerID`, the target `Churn`, numerical attributes such as `tenure`, `MonthlyCharges`, and `TotalCharges`, and categorical attributes such as `Contract`, `InternetService`, and `PaymentMethod`.
 
@@ -432,9 +432,9 @@ The currently configured Docker Desktop cluster and image cache are local to the
 
 Some runtime folders are ignored by Git and should be regenerated or retained locally rather than committed wholesale. Check `.gitignore` before staging generated reports, model binaries, local databases, or incoming data files.
 
-## Verified Integration Run
+## Historical Integration Run Snapshot
 
-The following is a snapshot from a successful GitHub Actions end-to-end run, not a guarantee that future runs will produce identical metrics.
+The following records an earlier successful GitHub Actions integration run. It used dataset version `7,344` and candidate model version `17`; these values are historical and do not describe the current local deployment, which uses model version `4`. Metrics may differ on later runs.
 
 ### Dataset ingestion
 
@@ -456,7 +456,11 @@ The following is a snapshot from a successful GitHub Actions end-to-end run, not
 
 The candidate passed the configured recall quality gate. However, its recall did not beat the observed Production model recall of approximately `0.7807`, so candidate version 17 was archived and Production version 1 remained active. Deployment was correctly skipped. Production inference then completed using the existing Production model.
 
-This run verifies the **new-batch ingestion → training/registration → evaluation → quality gate → lifecycle rejection → conditional deployment skip** path. The deployment script was also independently verified against the existing Production version 1 Docker image and Kubernetes deployment. A real new candidate that is promoted and then deployed automatically has not yet been demonstrated in the recorded run.
+This earlier run verifies the **new-batch ingestion → training/registration → evaluation → quality gate → lifecycle rejection → conditional deployment skip** path. The deployment script was also independently verified against the then-current Production version 1 Docker image and Kubernetes deployment. A real new candidate that is promoted and then deployed automatically was not demonstrated in that historical run.
+
+## Current Local Deployment Check
+
+On 27 October 2026, the local Kubernetes deployment was updated to `churn-prediction-api:model-v4`; the rollout completed successfully with 3 of 3 pods ready. The current deployment metadata reports Production model version `4`. Lab 1’s latest run detected its 100-row input batch as already ingested, so it confirmed duplicate-batch handling and kept the dataset at 7,444 rows. Lab 2 schema validation passed.
 
 ## Operational Requirements and Limitations
 
