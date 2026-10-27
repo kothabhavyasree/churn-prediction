@@ -391,7 +391,7 @@ deployment/
 The deployment metadata records the model name/version and source run. The deployment script uses a model-version image tag such as:
 
 ```text
-churn-prediction-api:model-v1
+churn-prediction-api:model-v4
 ```
 
 The deployment automation builds the image when the tag does not already exist, otherwise it reuses the local image; it then updates the Kubernetes deployment and waits for rollout completion. The promotion gate prevents an unpromoted candidate from replacing the Production service.
@@ -499,11 +499,6 @@ docker info
 kubectl get nodes
 kubectl get deployment churn-api
 ```
-
-### Docker reports permission denied from Python
-
-Check the process context, not just whether `docker` works interactively. In this environment, the virtual-environment Python executable previously had a Low Mandatory Integrity label, causing Python-launched Docker commands to fail. The executable's label was corrected to Medium and a Python subprocess Docker check subsequently succeeded. Avoid changing Docker permissions or disabling TLS verification as a first response.
-
 ### Deployment is skipped
 
 Inspect `reports/lifecycle_report.json`. If `promoted` is `false`, `deploy_if_promoted.py` is designed to skip deployment. This is the correct safety behavior when a candidate does not improve on Production.
