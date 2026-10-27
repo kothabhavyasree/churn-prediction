@@ -26,3 +26,5 @@ artifacts/
 .venv/
 .DS_Store
 .pytest_cache/
+
+actions-runner/

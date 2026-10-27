@@ -28,5 +28,15 @@
     "new_rows": 100,
     "current_rows": 7344,
     "timestamp": "2026-09-29T13:02:13.573913+00:00"
+  },
+  {
+    "dataset_version": "v05",
+    "archive_file": "data/raw/archive/churn_v04.csv",
+    "source_file": "data/raw/new_churn.csv",
+    "new_data_hash": "fd6a6f85d4175048a3542402221f19c1ab8bf493a07fdf5ba74828b4a062fc2c",
+    "previous_rows": 7344,
+    "new_rows": 100,
+    "current_rows": 7444,
+    "timestamp": "2026-10-27T08:30:33.939986+00:00"
   }
 ]

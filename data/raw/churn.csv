@@ -7343,3 +7343,103 @@ NEW000297,Female,0,Yes,No,26,Yes,No,DSL,No,Yes,No,Yes,Yes,Yes,Month-to-month,Yes
 NEW000298,Female,0,No,No,58,Yes,No,DSL,Yes,Yes,Yes,Yes,No,No,Two year,Yes,Credit card (automatic),69.1,3795.45,No
 NEW000299,Male,0,No,No,68,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,No,Yes,Two year,Yes,Bank transfer (automatic),114.84,7149.35,No
 NEW000300,Female,0,Yes,Yes,15,Yes,No,DSL,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Bank transfer (automatic),86.1,1155.6,No
+LAB13_000001,Female,0,Yes,Yes,46,Yes,No,Fiber optic,No,No,No,No,Yes,No,Month-to-month,No,Bank transfer (automatic),66.45998718547241,3057.16,Yes
+LAB13_000002,Female,0,Yes,Yes,23,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),22.498359587283307,517.46,No
+LAB13_000003,Female,0,Yes,Yes,41,Yes,No,No,No,No,Yes,No,Yes,Yes,Month-to-month,Yes,Electronic check,107.86768315461578,4422.58,Yes
+LAB13_000004,Male,0,Yes,Yes,70,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Mailed check,23.759937456302037,1663.2,No
+LAB13_000005,Female,0,Yes,Yes,63,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),24.360138366827,1534.69,No
+LAB13_000006,Female,0,No,No,53,Yes,Yes,No,No,Yes,No,No,Yes,No,Month-to-month,Yes,Electronic check,111.63732346118974,5916.78,Yes
+LAB13_000007,Female,0,No,No,12,Yes,Yes,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,87.0565067792833,1044.68,Yes
+LAB13_000008,Female,0,Yes,No,72,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Two year,Yes,Electronic check,120.0,8640.0,No
+LAB13_000009,Female,0,No,No,29,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,Yes,One year,Yes,Electronic check,109.77758494979535,3183.55,Yes
+LAB13_000010,Female,0,Yes,Yes,70,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,89.53889336184073,6267.72,No
+LAB13_000011,Male,0,Yes,Yes,65,Yes,Yes,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),30.667359418653284,1993.38,No
+LAB13_000012,Male,0,No,No,65,Yes,No,Fiber optic,Yes,No,Yes,Yes,Yes,Yes,One year,Yes,Credit card (automatic),120.0,7800.0,No
+LAB13_000013,Female,0,No,No,46,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,No,Month-to-month,No,Electronic check,110.0393848351681,5061.81,Yes
+LAB13_000014,Male,0,No,No,14,Yes,No,Fiber optic,Yes,No,No,No,No,No,One year,No,Mailed check,58.46252735100179,818.48,No
+LAB13_000015,Female,0,Yes,No,70,Yes,No,Fiber optic,Yes,No,No,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,109.5298568519,7667.09,Yes
+LAB13_000016,Female,0,No,No,0,Yes,Yes,Fiber optic,No,No,No,No,No,No,One year,Yes,Electronic check,92.94325335264028,0.0,Yes
+LAB13_000017,Male,0,Yes,No,8,Yes,No,Fiber optic,No,Yes,Yes,No,No,No,Month-to-month,Yes,Bank transfer (automatic),53.09971546708857,424.8,No
+LAB13_000018,Female,0,Yes,Yes,41,Yes,No,DSL,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,82.69879239361926,3390.65,No
+LAB13_000019,Male,0,No,No,5,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Credit card (automatic),22.50931855095984,112.55,No
+LAB13_000020,Female,1,No,No,2,Yes,No,Fiber optic,No,No,No,No,Yes,No,One year,No,Electronic check,75.65494566626455,151.31,Yes
+LAB13_000021,Male,1,Yes,No,58,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,Yes,One year,Yes,Electronic check,108.36380136950008,6285.1,Yes
+LAB13_000022,Male,0,No,No,60,No,No phone service,Fiber optic,Yes,Yes,Yes,Yes,No,No,Two year,Yes,Electronic check,47.05561421900265,2823.34,No
+LAB13_000023,Male,0,Yes,No,58,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,Yes,Month-to-month,Yes,Electronic check,112.8242069500301,6543.8,Yes
+LAB13_000024,Female,0,Yes,Yes,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Credit card (automatic),110.33626901218771,7944.21,Yes
+LAB13_000025,Male,0,Yes,No,72,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),120.0,8640.0,No
+LAB13_000026,Female,0,Yes,Yes,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,No,Yes,Month-to-month,No,Electronic check,86.31019685728616,6214.33,No
+LAB13_000027,Female,0,No,No,13,Yes,Yes,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,91.97912402724428,1195.73,Yes
+LAB13_000028,Male,0,No,No,9,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Bank transfer (automatic),24.246800932905796,218.22,No
+LAB13_000029,Female,0,Yes,No,71,Yes,Yes,DSL,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),101.40394367964238,7199.68,No
+LAB13_000030,Female,0,Yes,Yes,36,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Month-to-month,No,Electronic check,94.19711811208556,3391.1,Yes
+LAB13_000031,Female,1,No,No,5,Yes,No,Fiber optic,No,No,No,No,Yes,No,Month-to-month,No,Electronic check,93.72295326840502,468.61,Yes
+LAB13_000032,Female,1,Yes,No,70,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Electronic check,120.0,8400.0,No
+LAB13_000033,Female,0,Yes,Yes,62,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,23.435076117506775,1452.97,No
+LAB13_000034,Male,0,Yes,Yes,42,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,22.346265591966517,938.54,No
+LAB13_000035,Female,0,No,No,8,Yes,No,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,85.45452955737166,683.64,Yes
+LAB13_000036,Male,0,Yes,Yes,32,Yes,No,Fiber optic,No,Yes,Yes,Yes,Yes,No,Month-to-month,No,Electronic check,99.14229945644996,3172.55,No
+LAB13_000037,Male,1,No,No,1,Yes,Yes,No,No,No,No,No,Yes,Yes,One year,Yes,Electronic check,108.0091234260722,108.01,Yes
+LAB13_000038,Male,0,No,Yes,7,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,22.889524936789137,160.23,Yes
+LAB13_000039,Male,0,Yes,No,42,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),21.475666011862057,901.98,No
+LAB13_000040,Male,0,No,Yes,54,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,111.92145664741912,6043.76,No
+LAB13_000041,Male,0,Yes,No,70,Yes,No,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,113.55804772597097,7949.06,Yes
+LAB13_000042,Female,0,Yes,Yes,2,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Electronic check,22.326283807508975,44.65,Yes
+LAB13_000043,Male,0,Yes,No,68,Yes,Yes,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Electronic check,27.18613734656603,1848.66,No
+LAB13_000044,Female,0,Yes,Yes,31,Yes,No,DSL,No,Yes,No,No,Yes,No,Month-to-month,Yes,Credit card (automatic),67.22468956496495,2083.97,No
+LAB13_000045,Female,0,Yes,Yes,5,No,No phone service,DSL,Yes,No,Yes,Yes,Yes,No,Month-to-month,Yes,Mailed check,65.17469127629646,325.87,Yes
+LAB13_000046,Male,0,No,No,30,Yes,No,No,No,No,No,Yes,Yes,No,Month-to-month,Yes,Electronic check,63.644845162514784,1909.35,Yes
+LAB13_000047,Female,0,No,No,6,Yes,No,DSL,No,No,No,No,No,Yes,One year,Yes,Credit card (automatic),81.54578381553213,489.27,Yes
+LAB13_000048,Female,0,No,No,13,Yes,No,Fiber optic,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),101.21370241118,1315.78,No
+LAB13_000049,Male,0,Yes,No,65,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),120.0,7800.0,Yes
+LAB13_000050,Female,0,Yes,No,20,Yes,No,DSL,Yes,No,No,No,No,No,One year,No,Electronic check,87.71100050578906,1754.22,No
+LAB13_000051,Female,0,Yes,No,51,Yes,No,No,No,Yes,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,83.70672970526965,4269.04,Yes
+LAB13_000052,Female,1,No,No,27,Yes,No,DSL,No,Yes,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),52.780538254524586,1425.07,No
+LAB13_000053,Male,0,No,Yes,19,Yes,No,No,Yes,No,No,No,No,No,Month-to-month,Yes,Electronic check,55.24877447187244,1049.73,No
+LAB13_000054,Male,1,Yes,No,63,Yes,Yes,Fiber optic,Yes,No,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),111.2303941302872,7007.51,Yes
+LAB13_000055,Male,0,Yes,No,70,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,Two year,No,Bank transfer (automatic),120.0,8400.0,No
+LAB13_000056,Female,0,Yes,Yes,40,Yes,No,DSL,Yes,Yes,No,Yes,Yes,Yes,Month-to-month,No,Electronic check,95.87009817238317,3834.8,Yes
+LAB13_000057,Male,1,No,No,31,Yes,Yes,Fiber optic,Yes,Yes,No,No,No,No,Month-to-month,No,Electronic check,68.38292582372486,2119.87,Yes
+LAB13_000058,Male,0,No,No,18,Yes,No,Fiber optic,No,Yes,No,No,No,No,Month-to-month,Yes,Electronic check,57.49893598260795,1034.98,Yes
+LAB13_000059,Male,0,No,No,59,Yes,No,Fiber optic,No,No,Yes,Yes,Yes,No,Month-to-month,Yes,Electronic check,75.16529190712923,4434.75,No
+LAB13_000060,Female,0,Yes,Yes,57,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),23.94137247475418,1364.66,No
+LAB13_000061,Male,0,No,No,11,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,Yes,Bank transfer (automatic),24.230485217983375,266.54,Yes
+LAB13_000062,Male,0,Yes,Yes,72,No,No phone service,Fiber optic,Yes,Yes,No,No,Yes,No,One year,No,Electronic check,45.71437877209989,3291.44,No
+LAB13_000063,Female,0,No,No,9,Yes,Yes,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Bank transfer (automatic),77.27790476536806,695.5,Yes
+LAB13_000064,Male,0,No,No,6,Yes,Yes,No,No,No,No,No,No,No,Month-to-month,Yes,Electronic check,67.38704903066797,404.32,Yes
+LAB13_000065,Female,0,No,No,6,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Bank transfer (automatic),24.83810924884605,149.03,No
+LAB13_000066,Male,0,Yes,Yes,68,Yes,Yes,Fiber optic,No,Yes,No,Yes,Yes,Yes,One year,Yes,Electronic check,110.8413289380393,7537.21,No
+LAB13_000067,Male,0,Yes,Yes,69,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),84.202027384761,5809.94,Yes
+LAB13_000068,Female,0,Yes,No,17,Yes,No,DSL,No,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),51.99073307705786,883.84,No
+LAB13_000069,Male,0,Yes,Yes,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,No,Yes,Yes,One year,Yes,Electronic check,120.0,8640.0,No
+LAB13_000070,Male,1,Yes,No,72,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,Yes,Month-to-month,Yes,Mailed check,120.0,8640.0,No
+LAB13_000071,Male,0,Yes,Yes,31,Yes,No,Fiber optic,Yes,No,No,Yes,No,No,Month-to-month,No,Credit card (automatic),64.6877966532087,2005.32,Yes
+LAB13_000072,Female,0,Yes,Yes,57,Yes,Yes,Fiber optic,No,Yes,No,No,Yes,No,Month-to-month,Yes,Electronic check,74.83354597344604,4265.51,No
+LAB13_000073,Female,0,No,No,12,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),22.056338303087163,264.68,No
+LAB13_000074,Female,0,No,No,15,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Credit card (automatic),22.90323045633968,343.55,No
+LAB13_000075,Male,0,Yes,Yes,8,Yes,No,DSL,Yes,No,No,No,No,No,Month-to-month,Yes,Credit card (automatic),56.02142647853667,448.17,Yes
+LAB13_000076,Male,0,No,No,23,Yes,No,DSL,Yes,No,No,No,No,No,Month-to-month,No,Electronic check,79.4114363683479,1826.46,No
+LAB13_000077,Male,0,Yes,Yes,40,No,No phone service,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Mailed check,78.83402712414377,3153.36,No
+LAB13_000078,Male,0,Yes,Yes,72,Yes,Yes,DSL,No,Yes,No,Yes,No,Yes,Month-to-month,No,Credit card (automatic),91.53119382933654,6590.25,No
+LAB13_000079,Female,0,Yes,Yes,72,Yes,Yes,No,Yes,Yes,No,Yes,Yes,No,Month-to-month,No,Mailed check,91.4531430382428,6584.63,No
+LAB13_000080,Female,0,Yes,No,37,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,20.665573788965176,764.63,No
+LAB13_000081,Female,1,Yes,No,72,Yes,No,Fiber optic,No,Yes,Yes,Yes,Yes,No,Month-to-month,Yes,Electronic check,114.52974531871553,8246.14,No
+LAB13_000082,Male,0,No,No,62,Yes,No,Fiber optic,No,Yes,Yes,No,No,No,One year,No,Bank transfer (automatic),95.61314097568264,5928.01,No
+LAB13_000083,Male,0,Yes,Yes,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Electronic check,120.0,8640.0,Yes
+LAB13_000084,Female,1,No,No,66,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,120.0,7920.0,No
+LAB13_000085,Male,0,Yes,Yes,12,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,Yes,Electronic check,23.836469374863707,286.04,No
+LAB13_000086,Female,1,Yes,Yes,63,Yes,Yes,Fiber optic,No,Yes,Yes,No,Yes,Yes,One year,Yes,Bank transfer (automatic),120.0,7560.0,No
+LAB13_000087,Female,0,No,No,67,Yes,No,Fiber optic,Yes,Yes,No,Yes,No,No,Month-to-month,Yes,Electronic check,71.5767691591187,4795.64,Yes
+LAB13_000088,Male,0,No,No,62,Yes,Yes,Fiber optic,No,Yes,Yes,Yes,Yes,Yes,Month-to-month,Yes,Credit card (automatic),120.0,7440.0,Yes
+LAB13_000089,Female,0,No,No,8,Yes,No,No,No,No,No,No,No,No,Month-to-month,No,Bank transfer (automatic),45.88302104332151,367.06,No
+LAB13_000090,Male,0,No,No,8,Yes,No,Fiber optic,No,No,No,No,No,Yes,Month-to-month,No,Credit card (automatic),62.808249960271446,502.47,Yes
+LAB13_000091,Female,0,Yes,No,72,Yes,Yes,Fiber optic,Yes,Yes,Yes,Yes,Yes,Yes,Month-to-month,No,Credit card (automatic),97.33968384186674,7008.46,No
+LAB13_000092,Male,0,No,No,36,No,No phone service,DSL,No,Yes,No,Yes,No,No,Month-to-month,No,Electronic check,35.933116412235776,1293.59,No
+LAB13_000093,Male,0,No,No,68,Yes,Yes,Fiber optic,No,No,Yes,No,Yes,No,Month-to-month,Yes,Bank transfer (automatic),115.03103426067108,7822.11,No
+LAB13_000094,Female,1,Yes,No,6,Yes,Yes,Fiber optic,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,120.0,720.0,Yes
+LAB13_000095,Female,0,No,No,26,Yes,No,DSL,No,No,No,No,No,Yes,Month-to-month,Yes,Credit card (automatic),100.13257990028129,2603.45,Yes
+LAB13_000096,Female,0,No,No,6,Yes,No,Fiber optic,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Month-to-month,No,Electronic check,22.58904951562547,135.53,Yes
+LAB13_000097,Male,0,No,No,7,Yes,Yes,Fiber optic,No,No,No,Yes,Yes,No,Month-to-month,Yes,Bank transfer (automatic),113.1615983703753,792.13,Yes
+LAB13_000098,Female,0,Yes,Yes,20,Yes,No,DSL,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,One year,No,Bank transfer (automatic),23.88250827979903,477.65,No
+LAB13_000099,Male,0,No,No,0,Yes,No,No,No,No,No,Yes,No,No,One year,Yes,Electronic check,57.37821008186965,0.0,Yes
+LAB13_000100,Male,0,No,No,13,Yes,No,Fiber optic,No,No,No,Yes,Yes,Yes,Month-to-month,Yes,Bank transfer (automatic),101.89588764581568,1324.65,No

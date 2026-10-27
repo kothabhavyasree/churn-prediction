@@ -2,12 +2,12 @@
     "status": "success",
     "model_name": "Telco_Churn_Production_Model",
     "decision_metric": "recall",
-    "candidate_version": 2,
-    "candidate_run_id": "1a60bc7892d244afa81970aa626b60f8",
-    "candidate_metric": 0.7272727272727273,
-    "production_version_before": 1,
-    "production_metric_before": 0.7190721649484536,
+    "candidate_version": 4,
+    "candidate_run_id": "9cfb61bcbcb54637a29693f10b47637f",
+    "candidate_metric": 0.748663,
+    "production_version_before": 2,
+    "production_metric_before": 0.7272727272727273,
     "promoted": true,
     "decision": "PROMOTED",
-    "production_version_after": 2
+    "production_version_after": 4
 }
